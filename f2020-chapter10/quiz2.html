@@ -1,0 +1,29 @@
+<form method=get id=quizform>
+  <label>Search for country: </label>    
+  <input type=text name=country> <br> <input type=submit>    
+  <script>     
+  const countries = [     
+     { code: "AR", name: "Argentina", capital: "Buenos Aires" },   
+     { code: "AT", name: "Austria", capital: "Vienna" },      
+     { code: "BE", name: "Belgium", capital: "Brussels" }, 
+     { code: "CA", name: "Canada", capital: "Ottawa" }     
+  ];      
+  // your answer will go here
+let inp = document.querySelector('input');
+inp.addEventListener('change',function(e){
+    for(country of countries){
+        if (e.target.value=country.name){        
+            let listI=document.createElement("h1");
+            listI.innerHTML =`${country.name}`;
+            document.querySelector("h1").textContent = `${country.name}`
+            let con =countries.find(f);
+        function f(s){
+        return s.name === e.target.value;}
+        
+    }
+}
+})
+  
+  </script>    
+  <div></div>  
+</form>
